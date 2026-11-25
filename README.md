@@ -1,45 +1,57 @@
-# TechNova Store 🛍️
+# 🛍️ TechNova — Electronics E-Commerce Store
 
-### A Modern Electronics E-Commerce Experience
+<p align="center">
+  A modern, responsive electronics shopping experience built with React.
+</p>
 
-TechNova Store is a modern and responsive electronics e-commerce web application built with **React.js** and **Tailwind CSS**. It provides an intuitive shopping experience where users can explore products, search and filter items, view product details, manage their shopping cart, and proceed through a checkout flow.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+</p>
 
-The project focuses on reusable React components, client-side routing, state management, and responsive UI development.
+<p align="center">
+  <b>Explore technology. Shop smarter. Experience TechNova.</b>
+</p>
 
 ---
 
-## 🚀 Live Demo
+## 📌 Overview
 
-**Live Preview:** [TechNova Store](https://d32s2562-5173.inc1.devtunnels.ms/)
+**TechNova** is a modern electronics e-commerce web application designed to provide a smooth and user-friendly online shopping experience.
 
-> Note: This is a temporary developer tunnel URL and may not always be available.
+Built with React.js, React Router, and Tailwind CSS, the application features a clean dark-themed interface, dynamic product browsing, category filtering, shopping cart management, and a validated checkout process.
 
-## ✨ Features
+The project focuses on component-based architecture, reusable UI components, React Context API, and client-side state management.
 
-- **Product Listing:** Browse available electronics products.
-- **Product Details:** View individual product information.
-- **Search Functionality:** Find products using the search feature.
+## ✨ Key Features
+
+- **Modern UI:** Clean, responsive, dark-themed shopping interface.
+- **Product Listing:** Browse a collection of electronics products.
+- **Product Search:** Find products by name or description.
 - **Category Filtering:** Filter products by category.
-- **Shopping Cart:** Add, view, and manage cart items.
-- **Cart Management:** Update and remove products from the cart.
-- **Price Formatting:** Display formatted product prices.
-- **Checkout Page:** Proceed through the checkout interface.
-- **Order Confirmation:** View the order confirmation page.
-- **Client-Side Routing:** Navigate between pages without full page reloads.
-- **Reusable Components:** Organized and reusable React components.
-- **Responsive Interface:** Modern UI built with Tailwind CSS.
+- **Product Details:** View individual product information.
+- **Shopping Cart:** Add, remove, and manage cart items.
+- **Quantity Management:** Increase or decrease product quantities.
+- **Cart Persistence:** Cart data is saved using LocalStorage.
+- **Checkout System:** Customer information form with input validation.
+- **Payment Method Selection:** Cash on Delivery, UPI, and Card options in the checkout interface.
+- **Order Confirmation:** Display order details after successful form submission.
+- **Responsive Layout:** Designed for different screen sizes.
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
 | React.js 19 | Frontend library |
-| JavaScript (ES6+) | Application logic |
-| Tailwind CSS 4 | Styling and responsive UI |
 | Vite 8 | Development server and build tool |
-| React Router DOM 7 | Client-side routing |
-| Lucide React | Icons |
+| Tailwind CSS 4 | Styling and responsive UI |
+| React Router 7 | Client-side navigation |
 | Context API | Global cart state management |
+| LocalStorage | Persistent shopping cart data |
+| Lucide React | Icons |
+| JavaScript ES6+ | Application logic |
 | HTML5 | Application structure |
 | CSS3 | Custom styling |
 
@@ -58,32 +70,31 @@ TechNova/
 │   ├── Context/
 │   │   └── CartContext.jsx
 │   │
-│   ├── Utils/
-│   │   └── formatPrice.js
-│   │
 │   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── ProductCard.jsx
 │   │   ├── CartItem.jsx
 │   │   ├── CategoryFilter.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Loding.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── ProductCard.jsx
-│   │   └── SearchFilter.jsx
+│   │   ├── SearchFilter.jsx
+│   │   └── Loding.jsx
 │   │
 │   ├── data/
 │   │   └── product.js
 │   │
 │   ├── pages/
+│   │   ├── ProductList.jsx
+│   │   ├── ProductDetail.jsx
 │   │   ├── Cart.jsx
 │   │   ├── Checkout.jsx
-│   │   ├── OrderConfirmation.jsx
-│   │   ├── ProductDetail.jsx
-│   │   └── ProductList.jsx
+│   │   └── OrderConfirmation.jsx
+│   │
+│   ├── Utils/
+│   │   └── formatPrice.js
 │   │
 │   ├── App.jsx
 │   ├── App.css
-│   ├── index.css
-│   └── main.jsx
+│   └── index.css
 │
 ├── index.html
 ├── package.json
@@ -92,9 +103,9 @@ TechNova/
 └── README.md
 ```
 
-## ⚙️ Getting Started
+## 🚀 Getting Started
 
-Follow these steps to run the project locally.
+Follow these steps to run TechNova locally.
 
 ### 1. Clone the Repository
 
@@ -122,7 +133,7 @@ npm run dev
 
 ### 5. Open in Browser
 
-Visit the local URL displayed in your terminal, usually:
+Visit:
 
 ```text
 http://localhost:5173
@@ -133,54 +144,70 @@ http://localhost:5173
 | Command | Description |
 |---|---|
 | `npm run dev` | Start development server |
-| `npm run build` | Build for production |
+| `npm run build` | Build application for production |
 | `npm run preview` | Preview production build |
 | `npm run lint` | Run ESLint checks |
 
-## 🧭 Application Routes
+## 🛒 Application Routes
 
 | Route | Description |
 |---|---|
-| `/` | Product listing page |
-| `/product/:id` | Product details |
-| `/cart` | Shopping cart |
-| `/checkout` | Checkout page |
-| `/order-confirmation` | Order confirmation |
+| `/` | Home / Product Listing |
+| `/product/:id` | Product Details |
+| `/cart` | Shopping Cart |
+| `/checkout` | Checkout Page |
+| `/order-confirmation` | Order Confirmation |
 
-## 🎯 Learning Objectives
+## 🧠 Key Concepts Implemented
 
-This project helped me practice and improve my understanding of:
+This project demonstrates practical frontend development concepts:
 
-- Building reusable UI components with React.
-- Managing shared application state using Context API.
-- Implementing navigation with React Router.
-- Working with JavaScript ES6+ features.
-- Creating search and category filtering functionality.
-- Structuring a scalable frontend project.
-- Designing modern interfaces using Tailwind CSS.
-- Building multi-page e-commerce user experiences.
+- Component-based architecture
+- React Hooks (`useState`, `useEffect`, `useMemo`)
+- React Context API
+- React Router navigation
+- Reusable components
+- Conditional rendering
+- Dynamic product filtering
+- Array methods (`map`, `filter`, `reduce`, `find`)
+- LocalStorage integration
+- Form handling and validation
+- Responsive web design
+
+## ⚠️ Project Scope
+
+TechNova is currently a frontend demonstration project.
+
+- Product information is maintained in a local JavaScript data file.
+- Cart information is persisted in browser LocalStorage.
+- Checkout and order confirmation are simulated on the client side.
+- UPI and Card are interface options only; no real payment gateway is connected.
+- No backend API or database integration is currently included.
 
 ## 🔮 Future Improvements
 
-- User authentication and authorization.
 - Backend integration with Node.js and Express.js.
 - MongoDB database integration.
+- User registration and authentication.
+- Admin dashboard for product management.
 - Real payment gateway integration.
-- Product management dashboard.
-- Order history and user profiles.
+- Order history and tracking.
+- Wishlist functionality.
 - Product reviews and ratings.
 
 ## 👨‍💻 Developer
 
 **Rupam Ghosh**
 
-Aspiring MERN Stack Developer | Frontend Developer | Data Analytics Enthusiast
+Aspiring MERN Stack Developer | Frontend Developer
 
 - GitHub: [@codebyrupam](https://github.com/codebyrupam)
-- LinkedIn: [Rupam Ghosh](https://linkedin.com/in/rupam-ghosh-7293a5279)
+- Project Repository: [TechNova-Store](https://github.com/codebyrupam/TechNova-Store)
 
 ---
 
-⭐ If you find this project interesting, consider giving it a star!
-
-**Built with ❤️ using React.js**
+<p align="center">
+  <b>Built with ❤️ using React.js</b>
+  <br/>
+  <i>TechNova — Making Online Shopping Smarter.</i>
+</p>
